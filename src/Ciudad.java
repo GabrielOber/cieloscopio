@@ -50,7 +50,7 @@ public class Ciudad {
         return fechaConsulta;
     }
 
-    public void convierteCiudad (CiudadOpenWheather ciudadOpenWeather){
+    public void convierteCiudad (CiudadOpenWeather ciudadOpenWeather){
         this.ciudad = ciudadOpenWeather.name();
         this.pais = ciudadOpenWeather.sys().country();
         this.temperaturaActual = ciudadOpenWeather.main().temp();

@@ -38,14 +38,14 @@ public class ConsultaClima {
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             Gson gson = new GsonBuilder().create();
-            CiudadOpenWheather ciudadOpenWheather = gson.fromJson(response.body(), CiudadOpenWheather.class);
+            CiudadOpenWeather ciudadOpenWeather = gson.fromJson(response.body(), CiudadOpenWeather.class);
 
             // Obtener la fecha y hora actuales
             LocalDateTime ahora = LocalDateTime.now();
             DateTimeFormatter formateador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
             Ciudad ciudad = new Ciudad();
-            ciudad.convierteCiudad(ciudadOpenWheather);
+            ciudad.convierteCiudad(ciudadOpenWeather);
             ciudad.setFechaConsulta(ahora.format(formateador));
             return ciudad;
 

@@ -22,3 +22,14 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+# Archivos generados por el compilador
+/out/
+*.class
+# Archivos de compilacion y ejecucion
+/out/
+*.class
+
+# Archivos de configuracion de IntelliJ
+# Ignora las carpetas generadas (.idea/ ya fue subida, pero por seguridad)
+.idea/
+*.iml
