@@ -33,3 +33,4 @@ replay_pid*
 # Ignora las carpetas generadas (.idea/ ya fue subida, pero por seguridad)
 .idea/
 *.iml
+!cieloscopio.iml
